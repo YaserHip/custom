@@ -12,7 +12,7 @@ M.flutterTools = {
                     app_version = false,
                     device = true
                 }
-            },
+  },
             widget_guides = {
                 enabled = true
             },
@@ -65,7 +65,7 @@ M.code_runner = {
 
 M.alpha = {
     after = "base46",
-    disable = false,
+    disable = true,
     config = function()
         require "plugins.configs.alpha"
     end
@@ -141,6 +141,19 @@ M.null_ls = {
             sources = sources
         }
     end
+}
+
+M.telescope = {
+  cmd = "Telescope",
+  config = function()
+    require "plugins.configs.telescope"
+    require("telescope").load_extension "ui-select"
+    require("telescope").load_extension "file_browser"
+    require("telescope").load_extension "luasnip"
+  end,
+  setup = function()
+    require("core.utils").load_mappings "telescope"
+  end,
 }
 
 return M

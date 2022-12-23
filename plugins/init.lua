@@ -12,5 +12,6 @@ return {
     ["benfowler/telescope-luasnip.nvim"] = {},
     ["nvim-telescope/telescope-ui-select.nvim"] = {},
     ["nvim-telescope/telescope-file-browser.nvim"] = {},
+    ["nvim-telescope/telescope.nvim"] = overrides.telescope,
     ["jose-elias-alvarez/null-ls.nvim"] = overrides.null_ls
 }
