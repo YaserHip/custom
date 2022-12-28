@@ -12,7 +12,7 @@ M.flutterTools = {
                     app_version = false,
                     device = true
                 }
-  },
+            },
             widget_guides = {
                 enabled = true
             },
@@ -144,16 +144,25 @@ M.null_ls = {
 }
 
 M.telescope = {
-  cmd = "Telescope",
-  config = function()
-    require "plugins.configs.telescope"
-    require("telescope").load_extension "ui-select"
-    require("telescope").load_extension "file_browser"
-    require("telescope").load_extension "luasnip"
-  end,
-  setup = function()
-    require("core.utils").load_mappings "telescope"
-  end,
+    cmd = "Telescope",
+    config = function()
+        require "plugins.configs.telescope"
+        require("telescope").load_extension "ui-select"
+        require("telescope").load_extension "file_browser"
+        require("telescope").load_extension "luasnip"
+    end,
+    setup = function()
+        require("core.utils").load_mappings "telescope"
+    end
 }
+
+--[[ M.luasnip = {
+  wants = "friendly-snippets",
+  after = "nvim-cmp",
+  config = function()
+    require("plugins.configs.others").luasnip()
+    require("luasnip.loaders.from_snipmate").load({ path = {"custom.snippets"}})
+  end,
+} ]]
 
 return M

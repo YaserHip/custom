@@ -7,7 +7,7 @@ return {
     ["gelguy/wilder.nvim"] = overrides.wilder,
     ["mfussenegger/nvim-dap"] = overrides.dap,
     ["ryanoasis/vim-devicons"] = {},
-    ["L3MON4D3/LuaSnip"] = {},
+    -- ["L3MON4D3/LuaSnip"] = overrides.luasnip,
     ["beauwilliams/focus.nvim"] = overrides.focus,
     ["benfowler/telescope-luasnip.nvim"] = {},
     ["nvim-telescope/telescope-ui-select.nvim"] = {},
